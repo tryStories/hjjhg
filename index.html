@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GŁOSUJ NA SZLAPSA</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Loader -->
+    <div id="loader-container">
+        <span class="loader"></span>
+    </div>
+
+    <!-- Content -->
+    <div class="wrapper" style="visibility:hidden; opacity: 0;"> <!-- Ukrywamy zawartość -->
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="banner" style="visibility:hidden; opacity: 0;"> <!-- Ukrywamy baner -->
+        <div class="content">
+            <h2><b>głosuj na <br>szlapsa</b></h2>
+            <h6><b>Oddaj głos mądrze...</b></h6>
+
+            <!-- Sekcja ze zdjęciem i tekstem -->
+            <div class="image-section">
+                <img src="https://cdn.discordapp.com/attachments/1269371056720838742/1287055369503379538/att.3K4EDO-2LoD5CIxJUo0yVQCq0dgfzXqD16r_cYv2H4A_2.png?ex=66f02738&is=66eed5b8&hm=1bcec3daa328f5722e86c882deb9ab0becbf6a43ec76940057e802e967a766b0&" alt="Zdjęcie kandydata" class="image">
+                <p class="image-text ">Siema! Mam na imię Krystian Szlaps i jestem uczniem klasy 4TI. Od lat aktywnie angażuję się w życie naszej szkoły, m.in. poprzez godne reprezentowanie barw naszej szkoły w róznorakich zawodach sportowych, współudział apeli i pomoc na zaplaczu technicznym na róznych wydarzeniach oraz "pomoc sytuacyjna". </p>
+                <p class="image-text ">Kandyduję na przewodniczącego szkoły, ponieważ zależy mi na tym, aby nasza szkoła była jeszcze lepszym miejscem do nauki i rozwoju. Wierzę, że razem możemy wprowadzić wiele pozytywnych zmian.</p>
+                <p class="image-text ">Chciałbym być przewodniczącym, który słucha głosu każdego ucznia. Dlatego planuję regularnie rozmawiać z Wami i wspólnie pracować nad tym. Będę waszym pośrednikiem w kontaktach uczeń-nauczyciel i wyżej.Dzięki nam, nasza szkoła będzie lepszym miejscem, w której każdy będzie czuł się dobrze. aby nasza szkoła była miejscem, w którym każdy czuje się dobrze. </p>
+                <p class="image-text ">Jak to mówi klasyk: ,,Bo kluczem do sukcesu jesteś TY, a my wskażemy Ci właściwe drzwi". Głosujcie na mnie, jeśli chcecie, aby Wasz głos był słyszalny i aby nasza szkoła stawała się coraz lepsza każdego dnia!</p>
+                <p class="image-text ">WYBIERZ ZMIANĘ, WYBIERZ SZLAPSA!</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Ukryj loader po 5 sekundach z efektem zanikania
+        setTimeout(function() {
+            var loader = document.getElementById('loader-container');
+            loader.style.opacity = '0'; // Fade out loadera
+            
+            // Po 1 sekundzie ukryj loader i pokaż zawartość
+            setTimeout(function() {
+                loader.style.display = 'none'; // Całkowicie ukryj loader
+                var wrapper = document.querySelector('.wrapper');
+                var banner = document.querySelector('.banner');
+                
+                wrapper.style.visibility = 'visible'; // Wyświetl zawartość
+                banner.style.visibility = 'visible'; // Wyświetl baner
+                
+                // Fade in efekt
+                setTimeout(function() {
+                    wrapper.style.opacity = '1'; // Fade in zawartości
+                    banner.style.opacity = '1'; // Fade in banera
+                }, 50); // Krótkie opóźnienie, aby dać czas na widoczność
+            }, 1000); // Czas trwania efektu fade-out
+        }, 1000);
+    </script>
+
+</body>
+</html>
